@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import './FormUseRef.css';
+import  classes from './FormUseRef.module.css'
 
 export const FormUseRef = () => {
 
@@ -47,13 +48,13 @@ const [errorMsg, setErrorMsg] = useState(false)
                 <input type="number" />
                 <p>lorem    </p>
                 <input type="password" />
-                <button onClick={getFormValue} type='submitt'>Get Form</button>
+                <button onClick={getFormValue} type='submitt' className={classes.btn}>Get Form</button>
             </form>
             <div>
                 <h2>UseRef na pojedyńczy input</h2>
                 <input ref={refOneInput} onChange={(event) => changeInputVal(event)} type="text" />
                  {errorMsg && <p>Musi być min. 8 znaków</p>}
-                <button onClick={getInputRef} >Get Input</button>
+                <button onClick={getInputRef} className='btn2' >Get Input</button>
             </div>
         </div>
     )
