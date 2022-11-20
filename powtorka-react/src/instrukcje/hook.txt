@@ -1,0 +1,6 @@
+1. useState - tworzy w pliku  lokalny state który możemy edytowac za pomocą metod set 
+1a. importujemy z react import React , {useState} from 'react'
+
+
+
+

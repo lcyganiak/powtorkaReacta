@@ -1,0 +1,10 @@
+1. Instalujemy paczkę npm https://www.npmjs.com/package/react-router-dom
+2. tworzymy nawigację. ( "nav ") nawigacaj musi być w najwyższym dla nas pliku np. App.js
+3. W Plik index.js opkowujemy komponent App componentem BrowserRouter który importujemy z  import { BrowserRouter } from 'react-router-dom';
+4. W nawigacji używamy komponentu Link z react-router-dom
+5. Tworzymy komponenty które chemy wyświetlać po kliknieciu w linki nawigacji. W naszym przypadku tworzymy je w folderze components
+6. importujemy komponenty z kroku 5 do pliku w którym bedziemy ustawiać router . W naszym przypadku to app.js
+7. importujemy do App.js import {  Routes, Route} from 'react-router-dom';
+8. Tworzymy pod nawigacją w pliku app.js strukturę <Routes> <Route/> </Routes>. <Route/> dajemy tyle ile chcemy mieć komponetów jako osobne strony PLUS jeden extra.
+9. Extra  <Route/> wyglada tak <Route path="*" element={nazwa komponentu do obsługi 404}/>
+10. Przekierowania między componentami, bez nawigacji patrz plik. Contact.js
