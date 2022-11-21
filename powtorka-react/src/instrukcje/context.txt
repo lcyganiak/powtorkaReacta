@@ -1,0 +1,44 @@
+1. Nie musimy nic instalować !!!!!!!!!!!!!!!!!!!!!!!!
+2. tworzymy folder w src, o nazwie dowolnej, w naszym przypadku to będzie Store.
+2. W pliku GlobalStore.js, tworzymy z zminna według wzoru 
+export const GlobalStoreContext = createContext({podajemy klucz: wartośc , wedle naszych potrzeb }) , 
+gdzie  nazwa zminne jest obojętna, natomiast createContext jest funkcją REACTA !!!!
+3. W tym samym pliku tworzymy komponent według wzoru 
+const GlobalStore = (props) => {
+const [userName, setUserName] = useState('') // do każdej pojedyńczej zminnej uzywamy useState
+const [userId, setUserId ] = useState(null) 
+const [userPassword, setUserPassword ] = useState('') 
+const [isLog, setIsLog ] = useState(false) 
+const [userChildren, setUserChildren ] = useState([]) 
+
+const handlerChangeLog = () => {
+    setIsLog((previusValue) => !previusValue)
+} // funkcje zmniniające state 
+
+const handlerChangeUserName = (newName) => {
+    setUserName(newName)
+}
+const handlerChangeUserPassword = (newPassword) => {
+    setUserPassword(newPassword)
+}
+
+const handlerChangeUserChildren = (newChild) => {
+    setUserChildren((previusValue) => previusValue.push(newChild))
+}
+
+const handlerChangeUserId = (newId) => {
+    setUserId(newId)
+}
+const providerValue = {
+    userName,
+    userId,
+    userPassword,
+    isLog,
+    userChildren,
+    changeLog: handlerChangeLog,
+    changeUserName: handlerChangeUserName,
+    changeUserPassword: handlerChangeUserPassword,
+    changeUserChildren: handlerChangeUserChildren,
+    changeUserId: handlerChangeUserId,
+}
+
