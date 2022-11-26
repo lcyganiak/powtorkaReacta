@@ -8,7 +8,7 @@ import { FormUseState } from './components/FormUseState';
 import { NoMatch } from './components/NoMatch';
 import { ContactUSA } from './components/ContactUSA';
 import { FormUseRef } from './components/FormUseRef';
-import { Context } from './components/Context';
+import { Logowanie } from './components/Logowanie';
 import GlobalStore from './Store/GlobalStore';
 
 import { Routes, Route } from 'react-router-dom';
@@ -51,7 +51,7 @@ function App() {
           <Route path='/About' element={<About />} />
           <Route path='/formUseState' element={<FormUseState />} />
           <Route path='/formUseRef' element={<FormUseRef />} />
-          <Route path='/context' element={<Context/>}/>
+          <Route path='/context' element={<Logowanie/>}/>
           <Route path='/*' element={<NoMatch />} />
         </Routes>
 

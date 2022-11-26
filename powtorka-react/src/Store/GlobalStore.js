@@ -12,7 +12,8 @@ export const GlobalStoreContext = createContext({
     changeUserName: () => {},
     changeUserPassword: () => {},
     changeUserChildren: () => {},
-    changeUserId: () => {}
+    changeUserId: () => {},
+    changeLogWhenUserCan: () =>{}
 })
 
 
@@ -41,6 +42,10 @@ const handlerChangeUserChildren = (newChild) => {
 const handlerChangeUserId = (newId) => {
     setUserId(newId)
 }
+
+const handlerChangeLogWhenUserCan = (canLog) => {
+    setIsLog(canLog)
+}
 const providerValue = {
     userName,
     userId,
@@ -53,6 +58,7 @@ const providerValue = {
     changeUserPassword: handlerChangeUserPassword,
     changeUserChildren: handlerChangeUserChildren,
     changeUserId: handlerChangeUserId,
+    changeLogWhenUserCan :handlerChangeLogWhenUserCan,
 }
 
     return (
